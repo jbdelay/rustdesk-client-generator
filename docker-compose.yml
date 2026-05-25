@@ -5,14 +5,14 @@ services:
     image: bryangerlach/rdgen:latest
     restart: unless-stopped
     environment:
-      SECRET_KEY: "django-insecure-!(t-!f#6g#sr%yfded9(xha)g+=!6craeez^cp+*&bz_7vdk61"
-      GHUSER: "github_username"
-      GHBEARER: "github_access_token"
-      GENURL: "accessible_url_of_server"
-      ZIP_PASSWORD: ""
+      SECRET_KEY: "5918a49626b84af0b150edb15a88c1ef54d85844443ed677e3a3540fc4413f5a140eaf37c4eed4cba0040bedcd1e8a1a04a6"
+      GHUSER: "jbdelay"
+      GHBEARER: ${rustdesk-client-generator}
+      GENURL: ${GENURL}
+      ZIP_PASSWORD: ${ZIP_PASSWORD}
       GHBRANCH: "master"
       PROTOCOL: "https"
-      REPONAME: "rdgen"
+      REPONAME: "rustdesk-client-generator"
       SH_SECRET: ""
     ports:
       - "8000:8000"
