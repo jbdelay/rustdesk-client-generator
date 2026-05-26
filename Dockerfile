@@ -17,7 +17,3 @@ HEALTHCHECK --interval=30s --timeout=5s --retries=3 CMD wget --spider 0.0.0.0:80
 
 CMD ["/home/user/.local/bin/gunicorn", "-c", "gunicorn.conf.py", "rdgen.wsgi:application"]
 
-USER root
-RUN chmod 777 -R /opt/rdgen
-USER user
-
