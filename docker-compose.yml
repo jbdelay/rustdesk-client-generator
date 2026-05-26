@@ -20,7 +20,6 @@ services:
     dns:
       - 8.8.8.8
     volumes:
-      - volumes:
       - rdgen-exe:/opt/rdgen/exe
       - rdgen-png:/opt/rdgen/png
       - rdgen-temp_zips:/opt/rdgen/temp_zips
