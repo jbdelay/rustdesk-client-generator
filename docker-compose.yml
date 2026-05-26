@@ -14,6 +14,7 @@ services:
       PROTOCOL: "https"
       REPONAME: "rustdesk-client-generator"
       SH_SECRET: ""
+      DEBUG: "True"
     ports:
       - "8000:8000"
     dns:
