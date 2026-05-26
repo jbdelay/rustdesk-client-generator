@@ -1,7 +1,5 @@
 FROM python:3.13-alpine
 
-RUN chmod 777 -R /opt/rdgen/
-
 RUN adduser -D user
 USER user
 
@@ -10,6 +8,10 @@ WORKDIR /opt/rdgen
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt \
  && python manage.py migrate
+
+USER root
+RUN chmod 777 -R /opt/rdgen
+USER user
 
 ENV PYTHONUNBUFFERED=1
 
