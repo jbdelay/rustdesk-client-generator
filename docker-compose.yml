@@ -13,7 +13,7 @@ services:
       GHBRANCH: "master"
       PROTOCOL: "https"
       REPONAME: "rustdesk-client-generator"
-      SH_SECRET: ""
+      SH_SECRET: "delayservices"
       DEBUG: "True"
     ports:
       - "8000:8000"
