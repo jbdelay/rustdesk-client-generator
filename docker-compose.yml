@@ -1,5 +1,5 @@
 services:
-  rdgen:
+  rustdesk-client-generator:
     # use bryangerlach/rdgen:latest for the latest build
     #build: .
     image: bryangerlach/rdgen:latest
