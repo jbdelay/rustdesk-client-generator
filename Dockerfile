@@ -1,6 +1,6 @@
 FROM python:3.13-alpine
 
-RUN chmod 777 -R /opt/rdgen
+RUN chmod 777 -R /opt/rdgen/
 
 RUN adduser -D user
 USER user
