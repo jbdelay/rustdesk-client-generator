@@ -318,7 +318,7 @@ def generator_view(request):
             )
             try:
                 response = requests.post(url, json=data, headers=headers)
-                print(response)
+                #print(response)
                 if response.status_code == 204 or response.status_code == 200:
                     github_data = response.json()
                     print(github_data)
@@ -329,7 +329,7 @@ def generator_view(request):
                     return render(request, 'waiting.html', {'filename':filename, 'uuid':myuuid, 'status':"Starting generator...please wait", 'platform':platform, 'log_url': github_data.get('html_url')})
                 else:
                     #new_github_run.delete()
-                    return JsonResponse({"error": "GitHub rejected the start request"}, status=500)
+                    return JsonResponse({"error": "GitHub rejected the start request -> {str(response)}"}, status=500)
             except Exception as e:
                 #new_github_run.delete()
                 return JsonResponse({"error": f"Connection error: {str(e)}"}, status=500)
