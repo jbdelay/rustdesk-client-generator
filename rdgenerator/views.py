@@ -305,7 +305,7 @@ def generator_view(request):
                 },
                 "return_run_details": True
             } 
-            print(data)
+            #print(data)
             headers = {
                 'Accept':  'application/vnd.github+json',
                 'Content-Type': 'application/json',
@@ -318,7 +318,7 @@ def generator_view(request):
             )
             try:
                 response = requests.post(url, json=data, headers=headers)
-                print(response)
+                #print(response)
                 if response.status_code == 204 or response.status_code == 200:
                     github_data = response.json()
                     print(github_data)
@@ -332,7 +332,7 @@ def generator_view(request):
                     return JsonResponse({"error": f"GitHub rejected the start request -> {str(response)}"}, status=500)
             except Exception as e:
                 #new_github_run.delete()
-                return JsonResponse({"error": f"Connection error: {str(e)}"}, status=500)
+                return JsonResponse({"error": f"Connection error: {str(e), data, headers }"}, status=500)
     else:
         form = GenerateForm()
     #return render(request, 'maintenance.html')
