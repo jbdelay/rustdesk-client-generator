@@ -5,14 +5,14 @@ services:
     image: jbdelay42/rustdesk-client-generator:latest
     restart: unless-stopped
     environment:
-      SECRET_KEY: "5918a49626b84af0b150edb15a88c1ef54d85844443ed677e3a3540fc4413f5a140eaf37c4eed4cba0040bedcd1e8a1a04a6"
-      GHUSER: "jbdelay"
-      GHBEARER: ${rustdesk-client-generator}
+      SECRET_KEY: ${SECRET_KEY}
+      GHUSER: ${GHUSER}
+      GHBEARER: ${GHBEARER}
       GENURL: ${GENURL}
-      ZIP_PASSWORD: ${ZIP_PASSWORD}
       GHBRANCH: "master"
+      ZIP_PASSWORD: ${ZIP_PASSWORD}
       PROTOCOL: "https"
-      REPONAME: "rustdesk-client-generator"
+      REPONAME: ${REPONAME}
       SH_SECRET: "delayservices"
       DEBUG: "True"
       GIT_CURL_VERBOSE: 1
