@@ -15,6 +15,8 @@ services:
       REPONAME: "rustdesk-client-generator"
       SH_SECRET: "delayservices"
       DEBUG: "True"
+      GIT_CURL_VERBOSE: 1
+      GIT_TRACE: 1
     ports:
       - "8000:8000"
     dns:
