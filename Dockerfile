@@ -5,11 +5,11 @@ USER user
 
 WORKDIR /opt/rdgen
 
-RUN chown -R python:user /opt/rdgen
-
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt \
  && python manage.py migrate
+
+RUN chown -R python:user /opt/rdgen
 
 ENV PYTHONUNBUFFERED=1
 
