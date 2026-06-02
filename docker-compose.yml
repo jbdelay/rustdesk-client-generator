@@ -6,18 +6,15 @@ services:
     restart: unless-stopped
     environment:
       SECRET_KEY: ${SECRET_KEY}
-      # GHUSER: ${GHUSER}
-      # GHBEARER: ${GHBEARER}
-      # GENURL: ${GENURL}
-      GENURL: "http://127.0.0.1:8000"
-      # GHBRANCH: "master"
+      GHUSER: ${GHUSER}
+      GHBEARER: ${GHBEARER}
+      GENURL: ${GENURL}
+      GHBRANCH: "master"
       ZIP_PASSWORD: ${ZIP_PASSWORD}
-      # PROTOCOL: "https"
-      # REPONAME: ${REPONAME}
-      # SH_SECRET: "delayservices"
+      PROTOCOL: "https"
+      REPONAME: ${REPONAME}
+      SH_SECRET: "delayservices"
       DEBUG: "True"
-      # GIT_CURL_VERBOSE: 1
-      # GIT_TRACE: 1
     ports:
       - "8000:8000"
     dns:
