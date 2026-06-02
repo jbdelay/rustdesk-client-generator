@@ -2,12 +2,12 @@ services:
   rustdesk-client-generator:
     # use bryangerlach/rdgen:latest for the latest build
     #build: .
-    image: jbdelay42/rustdesk-client-generator:latest
+    image: bryangerlach/rdgen:latest
     restart: unless-stopped
     environment:
       SECRET_KEY: ${SECRET_KEY}
-      GHUSER: ${GHUSER}
-      GHBEARER: ${GHBEARER}
+      #GHUSER: ${GHUSER}
+      #GHBEARER: ${GHBEARER}
       GENURL: ${GENURL}
       GHBRANCH: "master"
       ZIP_PASSWORD: ${ZIP_PASSWORD}
