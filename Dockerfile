@@ -1,4 +1,4 @@
-FROM arm64v8/python:3.11.15
+FROM arm64v8/python:3.13-alpine
 
 RUN adduser -D user
 USER user
