@@ -9,6 +9,7 @@ services:
      # GHUSER: ${GHUSER}
      # GHBEARER: ${GHBEARER}
      # GENURL: ${GENURL}
+     GENURL: "http://127.0.0.1:8000"
      # GHBRANCH: "master"
       ZIP_PASSWORD: ${ZIP_PASSWORD}
      # PROTOCOL: "https"
