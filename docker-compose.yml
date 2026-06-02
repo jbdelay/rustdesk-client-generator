@@ -2,7 +2,7 @@ services:
   rustdesk-client-generator:
     # use bryangerlach/rdgen:latest for the latest build
     #build: .
-    image: jbdelay/rustdesk-client-generator:latest
+    image: jbdelay42/rustdesk-client-generator:latest
     restart: unless-stopped
     environment:
       SECRET_KEY: ${SECRET_KEY}
