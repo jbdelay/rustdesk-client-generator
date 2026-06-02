@@ -292,7 +292,8 @@ def generator_view(request):
                 os.remove(temp_json_path)
 
             zipJson = {}
-            zipJson['url'] = full_url
+            #zipJson['url'] = full_url
+            zipJson['url'] = 'https://127.0.0.1:8000'
             zipJson['file'] = zip_filename
 
             zip_url = json.dumps(zipJson)
