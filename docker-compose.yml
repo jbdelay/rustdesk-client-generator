@@ -2,30 +2,30 @@ services:
   rustdesk-client-generator:
     # use bryangerlach/rdgen:latest for the latest build
     #build: .
-    image: bryangerlach/rdgen:latest
+    image: jbdelay/rustdesk-client-generator:latest
     restart: unless-stopped
     environment:
       SECRET_KEY: ${SECRET_KEY}
-      GHUSER: ${GHUSER}
-      GHBEARER: ${GHBEARER}
-      GENURL: ${GENURL}
-      GHBRANCH: "master"
+     # GHUSER: ${GHUSER}
+     # GHBEARER: ${GHBEARER}
+     # GENURL: ${GENURL}
+     # GHBRANCH: "master"
       ZIP_PASSWORD: ${ZIP_PASSWORD}
-      PROTOCOL: "https"
-      REPONAME: ${REPONAME}
-      SH_SECRET: "delayservices"
+     # PROTOCOL: "https"
+     # REPONAME: ${REPONAME}
+     # SH_SECRET: "delayservices"
       DEBUG: "True"
-      GIT_CURL_VERBOSE: 1
-      GIT_TRACE: 1
+     # GIT_CURL_VERBOSE: 1
+     # GIT_TRACE: 1
     ports:
       - "8000:8000"
     dns:
       - 8.8.8.8
     volumes:
-      - rdgen-exe:/opt/rdgen/exe
-      - rdgen-png:/opt/rdgen/png
-      - rdgen-temp_zips:/opt/rdgen/temp_zips
+      - rdgen-exe:/app/output
+      - rdgen-png:/app/png
+      - rdgen-data:/app/data
 volumes:
   rdgen-exe:
   rdgen-png:
-  rdgen-temp_zips:
+  rdgen-data:
